@@ -1,1 +1,33 @@
+name: Weekly Universe Refresh
+
+on:
+  schedule:
+    - cron: "0 12 * * 6"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - env:
+          SEC_UA: ${{ secrets.SEC_UA }}
+        run: python -m scanner.universe --build --config config.yaml
+      - name: Commit refreshed universe
+        # The _yf_cache.json is committed too: if a build dies partway
+        # (Yahoo rate limits), the next run resumes instead of restarting.
+        run: |
+          git config user.name  "github-actions"
+          git config user.email "actions@github.com"
+          git add -f data/universe.json data/_yf_cache.json
+          git diff --staged --quiet || git commit -m "chore: refresh universe"
+          git push
 
