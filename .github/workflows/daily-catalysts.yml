@@ -1,1 +1,53 @@
+name: Daily Catalyst Scan
+
+on:
+  schedule:
+    # 7:00 AM ET email. Cron is UTC and does not follow DST:
+    #   11:00 UTC = 7:00 AM EDT (Mar-Nov)  <- active line
+    #   12:00 UTC = 7:00 AM EST (Nov-Mar)  <- swap in November, or accept 6am
+    - cron: "0 11 * * 1-5"
+  workflow_dispatch:
+    inputs:
+      days:
+        description: "Lookback days (blank = config default + weekend logic)"
+        default: ""
+
+concurrency:
+  group: catalysts
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      # Rolling cache carries the dedupe state file between runs, so the
+      # 2-day lookback never re-emails yesterday's signals.
+      - uses: actions/cache@v4
+        with:
+          path: state
+          key: catalyst-state-${{ github.run_id }}
+          restore-keys: catalyst-state-
+
+      - name: Scan
+        env:
+          SEC_UA: ${{ secrets.SEC_UA }}
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          MAIL_TO: ${{ secrets.MAIL_TO }}
+        run: |
+          if [ -n "${{ github.event.inputs.days }}" ]; then
+            python -m scanner.run --days ${{ github.event.inputs.days }}
+          else
+            python -m scanner.run
+          fi
 
