@@ -1,0 +1,116 @@
+# ---------------------------------------------------------------------------
+# Catalyst scanner config
+# ---------------------------------------------------------------------------
+
+# SEC requires a real contact string. Override with the SEC_UA env var.
+sec_user_agent: "Harry Xu harry.xu@example.com"
+
+# The 7am run reports "what's new since the last email". lookback_days: 2 with
+# the dedupe state file is how that's implemented — see README "Why not
+# lookback_days: 1". Weekend filings are picked up by Monday's run via the
+# weekend-aware logic in run.py.
+lookback_days: 2
+send_when_empty: true        # daily heartbeat so a silent failure is visible
+
+universe:
+  industries:
+    # --- Technology (all 12) ---
+    - "Communication Equipment"
+    - "Computer Hardware"
+    - "Consumer Electronics"
+    - "Electronic Components"
+    - "Electronics & Computer Distribution"
+    - "Information Technology Services"
+    - "Scientific & Technical Instruments"
+    - "Semiconductor Equipment & Materials"
+    - "Semiconductors"
+    - "Software—Application"
+    - "Software—Infrastructure"
+    - "Solar"
+    # --- Financial Services ---
+    - "Asset Management"
+    - "Capital Markets"
+    - "Credit Services"
+    - "Financial Conglomerates"
+    - "Financial Data & Stock Exchanges"
+    - "Insurance Brokers"
+    - "Mortgage Finance"
+    # --- Consumer Defensive ---
+    - "Beverages—Brewers"
+    - "Beverages—Non-Alcoholic"
+    - "Beverages—Wineries & Distilleries"
+    - "Confectioners"
+    - "Discount Stores"
+    - "Grocery Stores"
+    # --- Communication Services ---
+    - "Broadcasting"
+    - "Electronic Gaming & Multimedia"
+    - "Entertainment"
+    - "Internet Content & Information"
+    # --- Consumer Cyclical ---
+    - "Apparel Retail"
+    - "Department Stores"
+    - "Footwear & Accessories"
+    - "Gambling"
+    - "Home Improvement Retail"
+    - "Internet Retail"
+    - "Leisure"
+    - "Lodging"
+    - "Luxury Goods"
+    - "Packaging & Containers"
+    - "Personal Services"
+    - "Recreational Vehicles"
+    - "Residential Construction"
+    - "Resorts & Casinos"
+    - "Restaurants"
+    - "Specialty Retail"
+    - "Travel Services"
+  sectors: []
+
+  market_cap_min: 800000000        # $800mm floor
+  market_cap_max: 10000000000000   # effectively uncapped
+
+  extra_tickers: []
+  exclude_tickers: []
+
+signals:
+  insider_buy_min_value: 50000
+  insider_sale_min_value: 250000
+
+activists:
+  - "ELLIOTT"
+  - "STARBOARD"
+  - "JANA PARTNERS"
+  - "VALUEACT"
+  - "THIRD POINT"
+  - "ICAHN"
+  - "TRIAN"
+  - "PERSHING SQUARE"
+  - "MANTLE RIDGE"
+  - "ENGAGED CAPITAL"
+  - "ENGINE CAPITAL"
+  - "LEGION PARTNERS"
+  - "ANCORA"
+  - "IRENIC CAPITAL"
+  - "POLITAN CAPITAL"
+  - "SACHEM HEAD"
+  - "LAND & BUILDINGS"
+  - "BARINGTON"
+  - "BLACKWELLS"
+  - "VOSS CAPITAL"
+  - "22NW"
+  - "BANDERA PARTNERS"
+  - "CANNELL"
+  - "IMPACTIVE CAPITAL"
+  - "INCLUSIVE CAPITAL"
+  - "HG VORA"
+  - "SCOPIA"
+  - "SPRINGOWL"
+  - "ALTA FOX"
+  - "PRIVET FUND"
+  - "GLOBAL VALUE INVESTMENT"
+  - "KANEN WEALTH"
+  - "CORVEX"
+  - "GLENVIEW"
+  - "SARISSA"
+  - "TANG CAPITAL"
