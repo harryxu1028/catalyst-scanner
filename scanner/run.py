@@ -40,6 +40,33 @@ def save_seen(keys: set[str], keep: int = 6000) -> None:
     STATE.write_text(json.dumps({"keys": sorted(keys)[-keep:]}))
 
 
+def fetch_moves(tickers: list[str]) -> dict[str, float]:
+    """% change of the most recent completed session, per ticker.
+
+    One batched yfinance download for only the surfaced names. Any failure
+    returns partial/empty results rather than blocking the email.
+    """
+    if not tickers:
+        return {}
+    out: dict[str, float] = {}
+    try:
+        import yfinance as yf
+
+        px = yf.download(tickers, period="7d", interval="1d",
+                         progress=False, auto_adjust=True, group_by="ticker",
+                         threads=True)
+        for t in tickers:
+            try:
+                closes = (px[t]["Close"] if len(tickers) > 1 else px["Close"]).dropna()
+                if len(closes) >= 2:
+                    out[t] = float(closes.iloc[-1] / closes.iloc[-2] - 1.0)
+            except (KeyError, IndexError, TypeError):
+                continue
+    except Exception as exc:                      # noqa: BLE001 - never block the email
+        print(f"move fetch failed: {exc}")
+    return out
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--config", default=str(ROOT / "config.yaml"))
@@ -124,8 +151,9 @@ def main() -> None:
             s.tags.insert(0, f"CLUSTER: {len(buyers[s.ticker])} buyers")
 
     window = f"{start:%b %d}–{end:%b %d, %Y}" if start != end else f"{end:%b %d, %Y}"
-    html_body = render(found, window, len(cik_index))
-    text_body = plain(found)
+    moves = fetch_moves(sorted({s.ticker for s in found})) if found else {}
+    html_body = render(found, window, len(cik_index), moves)
+    text_body = plain(found, moves)
     counts = defaultdict(int)
     for s in found:
         counts[s.kind] += 1
