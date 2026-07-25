@@ -33,7 +33,19 @@ a{color:#0b4f9c;text-decoration:none}
 """
 
 
-def render(signals: list[Signal], window: str, universe_size: int) -> str:
+def _move_badge(pct: float | None) -> str:
+    if pct is None:
+        return ""
+    colour = "#1b5e20" if pct > 0.0005 else "#b3261e" if pct < -0.0005 else "#6b7280"
+    arrow = "▲" if pct > 0.0005 else "▼" if pct < -0.0005 else "•"
+    return (f"<span style='color:{colour};font-weight:700;font-size:12.5px'>"
+            f"{arrow} {pct*100:+.1f}%</span> "
+            f"<span style='color:#8b9199;font-size:10.5px'>prev close</span>")
+
+
+def render(signals: list[Signal], window: str, universe_size: int,
+           moves: dict[str, float] | None = None) -> str:
+    moves = moves or {}
     parts = [f"<html><head><meta charset='utf-8'><style>{_CSS}</style></head><body><div class='wrap'>"]
     parts.append(f"<h1>Catalyst Scan — {window}</h1>")
     parts.append(f"<div class='sub'>{len(signals)} signal(s) across {universe_size} covered names · "
@@ -53,7 +65,8 @@ def render(signals: list[Signal], window: str, universe_size: int) -> str:
             parts.append(
                 f"<div class='card' style='border-left-color:{colour}'>"
                 f"<div><span class='tk'>{html.escape(s.ticker)}</span> "
-                f"<span style='color:#6b7280'>· {html.escape(s.company[:60])}</span></div>"
+                f"<span style='color:#6b7280'>· {html.escape(s.company[:60])}</span>"
+                f"<span style='float:right'>{_move_badge(moves.get(s.ticker))}</span></div>"
                 f"<div class='hd'>{html.escape(s.headline)}</div>"
                 f"<div class='dt'>{html.escape(s.detail[:600])}</div>"
                 f"<div class='meta'>{tags}{html.escape(s.form)} · {html.escape(s.filed)} · "
@@ -65,7 +78,8 @@ def render(signals: list[Signal], window: str, universe_size: int) -> str:
     return "".join(parts)
 
 
-def plain(signals: list[Signal]) -> str:
+def plain(signals: list[Signal], moves: dict[str, float] | None = None) -> str:
+    moves = moves or {}
     lines = []
     for kind, label, _ in SECTIONS:
         rows = sorted([s for s in signals if s.kind == kind], key=lambda s: -s.score)
@@ -73,7 +87,9 @@ def plain(signals: list[Signal]) -> str:
             continue
         lines.append(f"\n== {label.upper()} ==")
         for s in rows:
-            lines.append(f"[{s.ticker}] {s.headline}\n    {s.url}")
+            mv = moves.get(s.ticker)
+            tag = f" ({mv*100:+.1f}% prev close)" if mv is not None else ""
+            lines.append(f"[{s.ticker}]{tag} {s.headline}\n    {s.url}")
     return "\n".join(lines) or "No qualifying filings."
 
 
