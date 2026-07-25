@@ -1511,14 +1511,6 @@
   "name": "Blackstone Inc.",
   "sector": "Financial Services"
  },
- "BXBL": {
-  "cik": "0001906364",
-  "exchange": "NGM",
-  "industry": "Residential Construction",
-  "market_cap": 1712658048,
-  "name": "Boxabl Inc.",
-  "sector": "Consumer Cyclical"
- },
  "BXSL": {
   "cik": "0001736035",
   "exchange": "NYQ",
@@ -1526,6 +1518,14 @@
   "market_cap": 5397526528,
   "name": "Blackstone Secured Lending Fund",
   "sector": "Financial Services"
+ },
+ "BYCBF": {
+  "cik": "0001706795",
+  "exchange": "PNK",
+  "industry": "Confectioners",
+  "market_cap": 7691406848,
+  "name": "Barry Callebaut AG",
+  "sector": "Consumer Defensive"
  },
  "BYD": {
   "cik": "0000906553",
@@ -3294,6 +3294,14 @@
   "market_cap": 19032473600,
   "name": "Fortive Corporation",
   "sector": "Technology"
+ },
+ "FUEMF": {
+  "cik": "0002001201",
+  "exchange": "PNK",
+  "industry": "",
+  "market_cap": 846660288,
+  "name": "TALAMORE MINING CORP.",
+  "sector": ""
  },
  "FUN": {
   "cik": "0001999001",
@@ -6047,6 +6055,14 @@
   "name": "Ollie's Bargain Outlet Holdings",
   "sector": "Consumer Defensive"
  },
+ "OLPX": {
+  "cik": "0001868726",
+  "exchange": "NGM",
+  "industry": "Specialty Retail",
+  "market_cap": 1391282176,
+  "name": "Olaplex Holdings, Inc.",
+  "sector": "Consumer Cyclical"
+ },
  "OMF": {
   "cik": "0001584207",
   "exchange": "NYQ",
@@ -7527,6 +7543,14 @@
   "name": "SK hynix Inc.",
   "sector": "Technology"
  },
+ "SKHYV": {
+  "cik": "0002120882",
+  "exchange": "NGM",
+  "industry": "Semiconductors",
+  "market_cap": 1192627142656,
+  "name": "SK hynix Inc. - American Deposi",
+  "sector": "Technology"
+ },
  "SKLTF": {
   "cik": "0001487139",
   "exchange": "PNK",
@@ -8031,6 +8055,14 @@
   "name": "",
   "sector": "Communication Services"
  },
+ "TCNNF": {
+  "cik": "0001754195",
+  "exchange": "PNK",
+  "industry": "",
+  "market_cap": 1699994368,
+  "name": "Trulieve Cannabis Corporation",
+  "sector": ""
+ },
  "TCOM": {
   "cik": "0001269238",
   "exchange": "NMS",
@@ -8437,22 +8469,6 @@
   "industry": "Software - Application",
   "market_cap": 12224915456,
   "name": "Tyler Technologies, Inc.",
-  "sector": "Technology"
- },
- "TYOYF": {
-  "cik": "0000354516",
-  "exchange": "PNK",
-  "industry": "Electronic Components",
-  "market_cap": 9254612992,
-  "name": "Taiyo Yuden Co. Ltd.",
-  "sector": "Technology"
- },
- "TYOYY": {
-  "cik": "0000354516",
-  "exchange": "PNK",
-  "industry": "Electronic Components",
-  "market_cap": 8572562944,
-  "name": "Taiyo Yuden Co. Ltd.",
   "sector": "Technology"
  },
  "U": {
