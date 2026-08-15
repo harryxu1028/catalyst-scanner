@@ -4519,14 +4519,6 @@
   "name": "Coca Cola Femsa S.A.B. de C.V.",
   "sector": "Consumer Defensive"
  },
- "KOKSF": {
-  "cik": "0002033019",
-  "exchange": "PNK",
-  "industry": "Semiconductor Equipment & Materials",
-  "market_cap": 12719523840,
-  "name": "",
-  "sector": "Technology"
- },
  "KR": {
   "cik": "0000056873",
   "exchange": "NYQ",
@@ -7639,14 +7631,6 @@
   "name": "Semtech Corporation",
   "sector": "Technology"
  },
- "SMTGF": {
-  "cik": "0001516684",
-  "exchange": "PNK",
-  "industry": "Solar",
-  "market_cap": 2456412928,
-  "name": "SMA Solar Technology Ag",
-  "sector": "Technology"
- },
  "SNAP": {
   "cik": "0001564408",
   "exchange": "NYQ",
@@ -8142,14 +8126,6 @@
   "market_cap": 14506246144,
   "name": "Tencent Music Entertainment Gro",
   "sector": "Communication Services"
- },
- "TMHC": {
-  "cik": "0001562476",
-  "exchange": "NYQ",
-  "industry": "Residential Construction",
-  "market_cap": 6665396224,
-  "name": "Taylor Morrison Home Corporatio",
-  "sector": "Consumer Cyclical"
  },
  "TNL": {
   "cik": "0001361658",
