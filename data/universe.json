@@ -2663,14 +2663,6 @@
   "name": "DXC Technology Company",
   "sector": "Technology"
  },
- "EA": {
-  "cik": "0000712515",
-  "exchange": "NMS",
-  "industry": "Electronic Gaming & Multimedia",
-  "market_cap": 52424613888,
-  "name": "Electronic Arts Inc.",
-  "sector": "Communication Services"
- },
  "EAT": {
   "cik": "0000703351",
   "exchange": "NYQ",
@@ -7087,6 +7079,14 @@
   "name": "Ridgepost Capital, Inc.",
   "sector": "Financial Services"
  },
+ "RPGRF": {
+  "cik": "0001614943",
+  "exchange": "PNK",
+  "industry": "Internet Content & Information",
+  "market_cap": 16285502464,
+  "name": "REA Group Ltd",
+  "sector": "Communication Services"
+ },
  "RQI": {
   "cik": "0001157842",
   "exchange": "NYQ",
@@ -7534,14 +7534,6 @@
   "market_cap": 4481019904,
   "name": "Champion Homes, Inc.",
   "sector": "Consumer Cyclical"
- },
- "SKYT": {
-  "cik": "0001819974",
-  "exchange": "NCM",
-  "industry": "Semiconductors",
-  "market_cap": 1506644864,
-  "name": "SkyWater Technology, Inc.",
-  "sector": "Technology"
  },
  "SLAB": {
   "cik": "0001038074",
