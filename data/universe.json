@@ -6151,6 +6151,14 @@
   "name": "Blue Owl Technology Finance Cor",
   "sector": "Financial Services"
  },
+ "OTGLF": {
+  "cik": "0001788235",
+  "exchange": "PNK",
+  "industry": "Electronic Gaming & Multimedia",
+  "market_cap": 6324335104,
+  "name": "CD PROJEKT SA",
+  "sector": "Communication Services"
+ },
  "OTTR": {
   "cik": "0001466593",
   "exchange": "NMS",
@@ -6462,6 +6470,14 @@
   "market_cap": 5144331776,
   "name": "Piper Sandler Companies",
   "sector": "Financial Services"
+ },
+ "PITAF": {
+  "cik": "0002149111",
+  "exchange": "PNK",
+  "industry": "Conglomerates",
+  "market_cap": 30293346304,
+  "name": "POSTE ITALIANE SPA",
+  "sector": "Industrials"
  },
  "PJT": {
   "cik": "0001626115",
