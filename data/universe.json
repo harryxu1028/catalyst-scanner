@@ -6159,6 +6159,14 @@
   "name": "CD PROJEKT SA",
   "sector": "Communication Services"
  },
+ "OTGLY": {
+  "cik": "0001788235",
+  "exchange": "PNK",
+  "industry": "Electronic Gaming & Multimedia",
+  "market_cap": 6267586048,
+  "name": "CD Projekt SA",
+  "sector": "Communication Services"
+ },
  "OTTR": {
   "cik": "0001466593",
   "exchange": "NMS",
@@ -7334,14 +7342,6 @@
   "market_cap": 1115410176,
   "name": "ScanSource, Inc.",
   "sector": "Technology"
- },
- "SE": {
-  "cik": "0001703399",
-  "exchange": "NYQ",
-  "industry": "Internet Retail",
-  "market_cap": 61248454656,
-  "name": "Sea Limited",
-  "sector": "Consumer Cyclical"
  },
  "SEB": {
   "cik": "0000088121",
