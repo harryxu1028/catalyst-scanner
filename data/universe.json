@@ -8415,6 +8415,22 @@
   "name": "Tortoise Energy Infrastructure ",
   "sector": "Financial Services"
  },
+ "TYHOF": {
+  "cik": "0002018139",
+  "exchange": "PNK",
+  "industry": "Conglomerates",
+  "market_cap": 44539826176,
+  "name": "TOYOTA TSUSHO CORP",
+  "sector": "Industrials"
+ },
+ "TYHOY": {
+  "cik": "0002018139",
+  "exchange": "PNK",
+  "industry": "Conglomerates",
+  "market_cap": 44446056448,
+  "name": "Toyota Tsusho Corp.",
+  "sector": "Industrials"
+ },
  "TYL": {
   "cik": "0000860731",
   "exchange": "NYQ",
