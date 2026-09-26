@@ -767,6 +767,14 @@
   "name": "Atlanticus Holdings Corporation",
   "sector": "Financial Services"
  },
+ "ATZAF": {
+  "cik": "0002139627",
+  "exchange": "PNK",
+  "industry": "Apparel Retail",
+  "market_cap": 9550271488,
+  "name": "Aritzia Inc.",
+  "sector": "Consumer Cyclical"
+ },
  "AVGO": {
   "cik": "0001730168",
   "exchange": "NMS",
