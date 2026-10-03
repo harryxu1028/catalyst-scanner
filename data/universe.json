@@ -4967,14 +4967,6 @@
   "name": "Main Street Capital Corporation",
   "sector": "Financial Services"
  },
- "MANDF": {
-  "cik": "0002038958",
-  "exchange": "PNK",
-  "industry": "Financial Conglomerates",
-  "market_cap": 3064559872,
-  "name": "MANDATUM OYJ",
-  "sector": "Financial Services"
- },
  "MANH": {
   "cik": "0001056696",
   "exchange": "NMS",
@@ -7206,6 +7198,14 @@
   "market_cap": 12835428352,
   "name": "RYOHIN KEIKAKU CO",
   "sector": "Consumer Cyclical"
+ },
+ "RZAI": {
+  "cik": "0002075335",
+  "exchange": "NGM",
+  "industry": "Software - Infrastructure",
+  "market_cap": 1107303424,
+  "name": "Roze AI Inc. Common Shares",
+  "sector": "Technology"
  },
  "RZLV": {
   "cik": "0001920294",
