@@ -3759,6 +3759,14 @@
   "name": "Hilton Grand Vacations Inc.",
   "sector": "Consumer Cyclical"
  },
+ "HHUSF": {
+  "cik": "0001700662",
+  "exchange": "PNK",
+  "industry": "Semiconductors",
+  "market_cap": 33057861632,
+  "name": "HUA HONG GRACE SEMICONDUCTOR LT",
+  "sector": "Technology"
+ },
  "HIMX": {
   "cik": "0001342338",
   "exchange": "NMS",
@@ -3782,6 +3790,14 @@
   "market_cap": 22269196288,
   "name": "Heineken Holding N.V.",
   "sector": "Consumer Defensive"
+ },
+ "HKXCF": {
+  "cik": "0001445476",
+  "exchange": "PNK",
+  "industry": "Financial Data & Stock Exchanges",
+  "market_cap": 61278658560,
+  "name": "Hong Kong Exchange & Clearing L",
+  "sector": "Financial Services"
  },
  "HLI": {
   "cik": "0001302215",
@@ -3845,22 +3861,6 @@
   "industry": "Communication Equipment",
   "market_cap": 63045328896,
   "name": "Hewlett Packard Enterprise Comp",
-  "sector": "Technology"
- },
- "HPHTF": {
-  "cik": "0001600928",
-  "exchange": "PNK",
-  "industry": "Electronic Components",
-  "market_cap": 4191812608,
-  "name": "Hamamatsu Photonics",
-  "sector": "Technology"
- },
- "HPHTY": {
-  "cik": "0001600928",
-  "exchange": "PNK",
-  "industry": "Electronic Components",
-  "market_cap": 4176201728,
-  "name": "Hamamatsu Photonics",
   "sector": "Technology"
  },
  "HPQ": {
@@ -4310,6 +4310,22 @@
   "market_cap": 1223029376,
   "name": "Jefferson Capital, Inc.",
   "sector": "Financial Services"
+ },
+ "JCYCF": {
+  "cik": "0001289688",
+  "exchange": "PNK",
+  "industry": "Conglomerates",
+  "market_cap": 8734722048,
+  "name": "Jardine Cycle & Carriage Limite",
+  "sector": "Industrials"
+ },
+ "JCYGY": {
+  "cik": "0001289688",
+  "exchange": "PNK",
+  "industry": "Conglomerates",
+  "market_cap": 8825626624,
+  "name": "Jardine Cycle & Carriage Limite",
+  "sector": "Industrials"
  },
  "JD": {
   "cik": "0001549802",
@@ -6103,14 +6119,6 @@
   "name": "ORIX Corp.",
   "sector": "Financial Services"
  },
- "OSCUF": {
-  "cik": "0001600520",
-  "exchange": "PNK",
-  "industry": "Financial Data & Stock Exchanges",
-  "market_cap": 15099483136,
-  "name": "Japan Exchange Group, Inc.",
-  "sector": "Financial Services"
- },
  "OSIS": {
   "cik": "0001039065",
   "exchange": "NMS",
@@ -7535,6 +7543,14 @@
   "name": "SiTime Corporation",
   "sector": "Technology"
  },
+ "SIVEF": {
+  "cik": "0002157475",
+  "exchange": "PNK",
+  "industry": "Semiconductors",
+  "market_cap": 943758528,
+  "name": "SIVERS SEMICONDUCTORS AB",
+  "sector": "Technology"
+ },
  "SKHY": {
   "cik": "0002120882",
   "exchange": "NMS",
@@ -7566,6 +7582,14 @@
   "market_cap": 4481019904,
   "name": "Champion Homes, Inc.",
   "sector": "Consumer Cyclical"
+ },
+ "SKYD": {
+  "cik": "0002041610",
+  "exchange": "NYQ",
+  "industry": "Entertainment",
+  "market_cap": 46186348544,
+  "name": "Paramount Skydance Corporation",
+  "sector": "Communication Services"
  },
  "SLAB": {
   "cik": "0001038074",
