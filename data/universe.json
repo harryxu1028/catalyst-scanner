@@ -2319,14 +2319,6 @@
   "name": "Diebold Nixdorf Incorporated",
   "sector": "Technology"
  },
- "DBRG": {
-  "cik": "0001679688",
-  "exchange": "NYQ",
-  "industry": "Asset Management",
-  "market_cap": 2939619328,
-  "name": "DigitalBridge Group, Inc.",
-  "sector": "Financial Services"
- },
  "DBX": {
   "cik": "0001467623",
   "exchange": "NMS",
@@ -3390,14 +3382,6 @@
   "market_cap": 3313498880,
   "name": "Golub Capital BDC, Inc.",
   "sector": "Financial Services"
- },
- "GBTG": {
-  "cik": "0001820872",
-  "exchange": "NYQ",
-  "industry": "Travel Services",
-  "market_cap": 4919929344,
-  "name": "Global Business Travel Group, I",
-  "sector": "Consumer Cyclical"
  },
  "GCT": {
   "cik": "0001857816",
@@ -6838,14 +6822,6 @@
   "market_cap": 1440146048,
   "name": "Nuveen NASDAQ 100 Dynamic Overw",
   "sector": "Financial Services"
- },
- "QRVO": {
-  "cik": "0001604778",
-  "exchange": "NMS",
-  "industry": "Semiconductors",
-  "market_cap": 7631739904,
-  "name": "Qorvo, Inc.",
-  "sector": "Technology"
  },
  "QSR": {
   "cik": "0001618756",
