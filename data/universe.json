@@ -6663,14 +6663,6 @@
   "name": "Prospect Capital Corporation",
   "sector": "Financial Services"
  },
- "PSKY": {
-  "cik": "0002041610",
-  "exchange": "NMS",
-  "industry": "Entertainment",
-  "market_cap": 9188411392,
-  "name": "Paramount Skydance Corporation",
-  "sector": "Communication Services"
- },
  "PSLV": {
   "cik": "0001494728",
   "exchange": "NYQ",
@@ -8821,14 +8813,6 @@
   "industry": "Internet Content & Information",
   "market_cap": 1899048960,
   "name": "Weibo Corporation",
-  "sector": "Communication Services"
- },
- "WBD": {
-  "cik": "0001437107",
-  "exchange": "NMS",
-  "industry": "Entertainment",
-  "market_cap": 64608915456,
-  "name": "Warner Bros. Discovery, Inc. - ",
   "sector": "Communication Services"
  },
  "WBTN": {
